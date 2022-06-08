@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boca-Form</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+	<body class="container">
+    <h1 id="title" class="txt1">Formulario de Postulacion al Plantel de Boca Juniors</h1>
+		<p id="description" class="txt2">La Mitad Mas Uno</p>
+		<form id="survey-form">
+			<div class="bigmargin">
+				<label class="smallmargin dspblock" id="name-label" for="name">Nombre</label>
+				<input id="name" class="resize" type="text" name="name" pattern="[a-zA-Z]{1,20}" required placeholder="Escribe tu nombre">
+			</div>
+			<div class="bigmargin">
+				<label class="smallmargin dspblock" id="number" for="age">Edad</label>
+				<input class="resize" id="age" name="age" type="number" min="1" max="40"
+				required placeholder="Escribe tu edad">
+			</div>
+			<div>
+				<label class="smallmargin dspblock" id="email-label" for="email">Correo</label>
+				<input class="resize" id="email" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+				required placeholder="Escribe tu correo electronico">
+			</div>
+			<div class="bigmargin">
+				<label for="dropdown">En que posicion juegas?</label>
+				<select class="dspblock smallmargin" id="dropdown" name="posicion-select">
+					<option>Elija una opcion</option>
+					<option value="arquero">Arquero</option>
+					<option value="defensor">Defensor</option>
+					<option value="volante">Volante</option>
+					<option value="delantero">Delantero</option>
+				</select>
+			</div>
+			<div>
+				<fieldset>
+					<legend class="bigmargin">Cuanta experiencia tenes en el futbol profesional?</legend>
+					<div class="smallmargin">
+						<input id="ninguna" type="radio" name="expfut" value="ninguna">
+						<label for="ninguna">Ninguna</label>
+					</div>
+					<div class="smallmargin">
+						<input id="1yr" type="radio" name="expfut" value="1yr">
+						<label for="1yr">Mas de 1 ano</label>
+					</div>
+					<div class="smallmargin">
+						<input id="3yrs" type="radio" name="expfut" value="3yrs">
+						<label for="3yrs">Mas de 3 anos</label>
+					</div>
+					<div class="smallmargin">
+						<input id="5yrs" type="radio" name="expfut" value="5yrs">
+						<label for="5yrs">Mas de 5 anos</label>
+					</div>			
+				</fieldset>
+			</div>
+			<div class="smallmargin">
+				<fieldset>
+					<legend class="bigmargin">A cuales divisiones te queres postular?</legend>
+					<div class="smallmargin">
+						<input type="checkbox" id="primera" name="primera" value="primera">
+						<label for="primera">Primera</label>
+					</div>
+					<div class="smallmargin">
+						<input type="checkbox" id="segunda" name="segunda" value="segunda">
+						<label for="segunda">Segunda</label>
+					</div>
+					<div class="smallmargin">
+						<input type="checkbox" id="tercera" name="tercera" value="tercera">
+						<label for="tercera">Tercera</label>
+					</div>
+					<div class="smallmargin">
+						<input type="checkbox" id="cuarta" name="cuarta" value="cuarta">
+						<label for="cuarta">Cuarta</label>
+					</div>
+					<div class="smallmargin">
+						<input type="checkbox" id="quinta" name="quinta" value="quinta">
+						<label for="quinta">Quinta</label>
+					</div>
+					<div class="smallmargin">
+						<input type="checkbox" id="sexta" name="sexta" value="sexta">
+						<label for="sexta">Sexta</label>
+					</div>
+					<div class="smallmargin">
+						<input type="checkbox" id="septima" name="septima" value="septima">
+						<label for="septima">Septima</label>
+					</div>
+					<div class="smallmargin">
+						<input type="checkbox" id="octava" name="octava" value="octava">
+						<label for="octava">Octava</label>
+					</div>
+					<div class="smallmargin">
+						<input type="checkbox" id="novena" name="novena" value="novena">
+						<label for="novena">Novena</label>
+					</div>
+					<div>
+						<input type="checkbox" id="infantiles" name="infantiles" value="infantiles">
+						<label for="infantiles">Infantiles</label>
+					</div> 				
+				</fieldset>
+			</div>
+			<div class="bigmargin">
+				<label class="dspblock bigmargin" for="coments">Comentarios o sugerencias?</label>
+				<textarea class="bigmargin dspblock resize" id="coments" name="coments" rows="5" cols="33">Escribelos aqui...</textarea>
+				<input class="dspblock submit" id="submit" type="submit" value="send">
+			</div>
+		</form>
+	</body>
+</html>

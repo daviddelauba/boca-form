@@ -5,42 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boca-Form</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-	<body class="container">
-    <h1 id="title" class="txt1">Formulario de Postulacion al Plantel de Boca Juniors</h1>
+	<body>
+    <h1 id="title" class="txt1">Encuesta Anual de Satisfaccion al Socio del</br>Club Atletico Boca Juniors</h1>
 		<p id="description" class="txt2">La Mitad Mas Uno</p>
 		<form id="survey-form">
 			<div class="bigmargin">
-				<label class="smallmargin dspblock" id="name-label" for="name">Nombre</label>
-				<input id="name" class="resize" type="text" name="name" pattern="[a-zA-Z]{1,20}" required placeholder="Escribe tu nombre">
+				<label class="dspblock" id="name-label" for="name">Nombre</label>
+				<input id="name" class="resize inputstyle" type="text" name="name" pattern="[a-zA-Z]{1,20}" required placeholder="Escribe tu nombre">
 			</div>
 			<div class="bigmargin">
-				<label class="smallmargin dspblock" id="number" for="age">Edad</label>
-				<input class="resize" id="age" name="age" type="number" min="1" max="40"
+				<label class="dspblock" id="number" for="age">Edad</label>
+				<input class="resize inputstyle" id="age" name="age" type="number" min="1" max="40"
 				required placeholder="Escribe tu edad">
 			</div>
 			<div>
-				<label class="smallmargin dspblock" id="email-label" for="email">Correo</label>
-				<input class="resize" id="email" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+				<label class="dspblock" id="email-label" for="email">Correo</label>
+				<input class="resize inputstyle" id="email" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
 				required placeholder="Escribe tu correo electronico">
 			</div>
 			<div class="bigmargin">
-				<label for="dropdown">En que posicion juegas?</label>
-				<select class="dspblock smallmargin" id="dropdown" name="posicion-select">
+				<label for="dropdown">Cual es su ocupacion?</label>
+				<select class="dspblock inputstyle" id="dropdown" name="posicion-select">
 					<option>Elija una opcion</option>
-					<option value="arquero">Arquero</option>
-					<option value="defensor">Defensor</option>
-					<option value="volante">Volante</option>
-					<option value="delantero">Delantero</option>
+					<option value="arquero">Estudiante</option>
+					<option value="defensor">Trabajador/a</option>		
+					<option value="delantero">Desempleado/a</option>
 				</select>
 			</div>
 			<div>
 				<fieldset>
-					<legend class="bigmargin">Cuanta experiencia tenes en el futbol profesional?</legend>
+					<legend class="bigmargin">Hace cuanto es socio del Club?</legend>
 					<div class="smallmargin">
 						<input id="ninguna" type="radio" name="expfut" value="ninguna">
-						<label for="ninguna">Ninguna</label>
+						<label for="ninguna">Menos de 1 ano</label>
 					</div>
 					<div class="smallmargin">
 						<input id="1yr" type="radio" name="expfut" value="1yr">
@@ -58,53 +57,45 @@
 			</div>
 			<div class="smallmargin">
 				<fieldset>
-					<legend class="bigmargin">A cuales divisiones te queres postular?</legend>
+					<legend class="bigmargin">Marque sus beneficios preferidos:</legend>
 					<div class="smallmargin">
 						<input type="checkbox" id="primera" name="primera" value="primera">
-						<label for="primera">Primera</label>
+						<label for="primera">Practica de Deportes</label>
 					</div>
 					<div class="smallmargin">
 						<input type="checkbox" id="segunda" name="segunda" value="segunda">
-						<label for="segunda">Segunda</label>
+						<label for="segunda">Actividades Culturales</label>
 					</div>
 					<div class="smallmargin">
 						<input type="checkbox" id="tercera" name="tercera" value="tercera">
-						<label for="tercera">Tercera</label>
+						<label for="tercera">Tarjeta BBVA Xeneixe</label>
 					</div>
 					<div class="smallmargin">
 						<input type="checkbox" id="cuarta" name="cuarta" value="cuarta">
-						<label for="cuarta">Cuarta</label>
+						<label for="cuarta">Programa de Descuentos</label>
 					</div>
 					<div class="smallmargin">
 						<input type="checkbox" id="quinta" name="quinta" value="quinta">
-						<label for="quinta">Quinta</label>
+						<label for="quinta">Atencion en Centro Medico</label>
 					</div>
 					<div class="smallmargin">
 						<input type="checkbox" id="sexta" name="sexta" value="sexta">
-						<label for="sexta">Sexta</label>
+						<label for="sexta">Visitas al Entrenamiento</label>
 					</div>
 					<div class="smallmargin">
 						<input type="checkbox" id="septima" name="septima" value="septima">
-						<label for="septima">Septima</label>
+						<label for="septima">Visitas a la Bombonera</label>
 					</div>
 					<div class="smallmargin">
 						<input type="checkbox" id="octava" name="octava" value="octava">
-						<label for="octava">Octava</label>
-					</div>
-					<div class="smallmargin">
-						<input type="checkbox" id="novena" name="novena" value="novena">
-						<label for="novena">Novena</label>
-					</div>
-					<div>
-						<input type="checkbox" id="infantiles" name="infantiles" value="infantiles">
-						<label for="infantiles">Infantiles</label>
+						<label for="octava">Visitas al Museo de la Pasion Boquense</label>
 					</div> 				
 				</fieldset>
 			</div>
 			<div class="bigmargin">
-				<label class="dspblock bigmargin" for="coments">Comentarios o sugerencias?</label>
-				<textarea class="bigmargin dspblock resize" id="coments" name="coments" rows="5" cols="33">Escribelos aqui...</textarea>
-				<input class="dspblock submit" id="submit" type="submit" value="send">
+				<label class="dspblock bigmargin" for="coments">Comentarios o sugerencias para mejorar la calidad del servicio:</label>
+				<textarea class="bigmargin dspblock" id="coments" name="coments" rows="10" cols="33">Escribelos aqui...</textarea>
+				<input class="dspblock submit" id="submit" type="submit" value="Enviar">
 			</div>
 		</form>
 	</body>

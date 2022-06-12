@@ -9,5 +9,3 @@ I thought it was fun, so I continued anyway. I invested a few dozen more hours i
 It was the first time I used CSS intensively and extensively with HTML. Now I feel for the first time that I have a decent fluency in both languages.
 
 I learned a lot. I loved doing it not by reading or listening to a tutorial but as part of a problem-solving process that culminated in a functional and beautiful site.
-
-Translated with www.DeepL.com/Translator (free version)

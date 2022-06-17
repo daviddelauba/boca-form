@@ -5,123 +5,123 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Form survey for members of soccer club Boca Juniors">
 	<title>Boca-Form</title>
 	<link rel="stylesheet" href="css/styles.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="" href="https://fonts.googleapis.com">
+	<link href="https://fonts.gstatic.com" crossorigin>
 	<link
+	  as="style"
+		onload="this.onload=null;this.rel='stylesheet'"
 		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,600&display=swap"
-		rel="stylesheet">
+		rel="preload">
+	<script src="/scripts/boca.js"></script>
 </head>
 
 <body>
 	<main>
-	<h1 id="title" class="txt1">Encuesta Anual de Satisfacción al Socio del<br>Club Atletico Boca Juniors</h1>
+		<h1 id="title">Encuesta de Satisfacción al Socio<br>del Club Atlético Boca Juniors</h1>
+		<p id="description">La Mitad Más Uno</p>
+		<form id="boca-form" action="index.html" method="post">
+			<p class="heading">Datos Personales</p>
+			<div>
+				<label class="sr-only" for="name">Nombre Completo</label>
+				<input id="name" class="inputform" type="text" name="personaldata" placeholder="Nombre completo" required>
+			</div>
+			<div>
+				<label class="sr-only" for="age">Edad</label>
+				<input class="inputform" id="age" name="personaldata" type="number" min="1" max="100" required
+					placeholder="Edad">
+			</div>
+			<div>
+				<label class="sr-only" for="email">Correo Electrónico</label>
+				<input class="inputform" id="email" type="email" name="personaldata"
+					pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="Correo electrónico">
+			</div>
+			<div>
+				<label class="sr-only" for="phone">Número de Celular</label>
+				<input id="phone" class="inputform" type="tel" name="personaldata" pattern=".{15,15}" required
+					placeholder="Número de Celular" />
+				<script>
+
+				</script>
+			</div>
+			<div class="margin">
+				<label for="dropdown">Tipo de Socio:</label>
+				<select class="block" id="dropdown" name="dropdown" required>
+					<option value="" disabled selected>Elija una opción</option>
+					<option value="student">Adherente</option>
+					<option value="worker">Activo</option>
+					<option value="unemployed">Vitalicio</option>
+				</select>
+			</div>
+			<p class="heading">Encuesta</p>
+			<div class="margin">
+				<fieldset>
+					<legend class="legend">¿Hace cuánto es socio del Club?</legend>
+					<div>
+						<input id="-1yr" type="radio" name="antiquity" value="-1yr">
+						<label for="-1yr">Menos de 1 año</label>
+					</div>
+					<div>
+						<input id="+1yr" type="radio" name="antiquity" value="+1yr">
+						<label for="+1yr">Más de 1 año</label>
+					</div>
+					<div>
+						<input id="3yrs" type="radio" name="antiquity" value="3yrs">
+						<label for="3yrs">Más de 3 años</label>
+					</div>
+					<div class="">
+						<input id="5yrs" type="radio" name="antiquity" value="5yrs">
+						<label for="5yrs">Más de 5 años</label>
+					</div>
+				</fieldset>
+			</div>
+			<div class="margin">
+				<fieldset>
+					<legend class="legend">Marque sus beneficios preferidos:</legend>
+					<div>
+						<input type="checkbox" id="practice" name="practice" value="practice">
+						<label for="practice">Práctica de Deportes</label>
+					</div>
+					<div>
+						<input type="checkbox" id="activities" name="activities" value="activities">
+						<label for="activities">Actividades Culturales</label>
+					</div>
+					<div>
+						<input type="checkbox" id="card" name="card" value="card">
+						<label for="card">Tarjeta BBVA Xeneixe</label>
+					</div>
+					<div>
+						<input type="checkbox" id="discounts" name="discounts" value="discounts">
+						<label for="discounts">Programa de Descuentos</label>
+					</div>
+					<div>
+						<input type="checkbox" id="healthcare" name="healthcare" value="healthcare">
+						<label for="healthcare">Atención en Centro Médico</label>
+					</div>
+					<div>
+						<input type="checkbox" id="training" name="training" value="training">
+						<label for="training">Visitas al Entrenamiento</label>
+					</div>
+					<div>
+						<input type="checkbox" id="stadium" name="stadium" value="stadium">
+						<label for="stadium">Visitas a la Bombonera</label>
+					</div>
+					<div>
+						<input type="checkbox" id="museum" name="museum" value="museum">
+						<label for="museum">Visitas al Museo de la Pasión Boquense</label>
+					</div>
+				</fieldset>
+			</div>
+			<div>
+				<label class="block legend" for="coments">¿Comentarios o sugerencias?</label>
+				<textarea class="block margin" id="coments" name="coments" rows="10" cols="33"
+					placeholder="Escribelas aquí..."></textarea>
+				<input class="block submit" id="submit" type="submit" value="Enviar">
+			</div>
+		</form>
 	</main>
-	<p id="description">La Mitad Más Uno</p>
-	<form id="survey-form">
-		<p class="heading">Datos Personales</p>
-		<hr>
-		<div>
-			<label for="name"></label>
-			<input id="name" class="inputform" type="text" name="personaldata" placeholder="Nombre completo" required>
-		</div>
-		<div>
-			<label for="age"></label>
-			<input class="inputform" id="age" name="personaldata" type="number" min="1" max="100" required placeholder="Edad">
-		</div>
-		<div>
-			<label for="email"></label>
-			<input class="inputform" id="email" type="email" name="personaldata" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-				required placeholder="Correo electrónico">
-		</div>
-		<div>
-			<label for="phone"></label>
-			<input id="phone" class="inputform" type="tel" name="personaldata" pattern=".{15,15}" required
-				placeholder="(011) XXXX-XXXX" />
-			<script>
-				document.getElementById('phone').addEventListener('input', function (e) {
-					var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,4})(\d{0,4})/);
-					e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
-				});
-			</script>
-		</div>
-		<div style="margin: 0rem 0 1rem 0;">
-			<label for="dropdown">Ocupación:</label>
-			<select class="block" id="dropdown" name="dropdown" required>
-				<option value="" disabled selected>Elija una opción</option>
-				<option value="student">Estudiante</option>
-				<option value="worker">Trabajador/a</option>
-				<option value="unemployed">Desempleado/a</option>
-			</select>
-		</div>
-		<p class="heading">Encuesta</p>
-		<hr>
-		<div style="margin: 0rem 0 1rem 0;">
-			<fieldset>
-				<legend class="legend">¿Hace cuánto es socio del Club?</legend>
-				<div>
-					<input id="-1yr" type="radio" name="antiquity" value="-1yr">
-					<label for="-1yr">Menos de 1 año</label>
-				</div>
-				<div>
-					<input id="+1yr" type="radio" name="antiquity" value="+1yr">
-					<label for="+1yr">Más de 1 año</label>
-				</div>
-				<div>
-					<input id="3yrs" type="radio" name="antiquity" value="3yrs">
-					<label for="3yrs">Más de 3 años</label>
-				</div>
-				<div class="">
-					<input id="5yrs" type="radio" name="antiquity" value="5yrs">
-					<label for="5yrs">Más de 5 años</label>
-				</div>
-			</fieldset>
-		</div>
-		<div style="margin: 0rem 0 1rem 0;">
-			<fieldset>
-				<legend class="legend">Marque sus beneficios preferidos:</legend>
-				<div>
-					<input type="checkbox" id="practice" name="practice" value="practice">
-					<label for="practice">Práctica de Deportes</label>
-				</div>
-				<div>
-					<input type="checkbox" id="activities" name="activities" value="activities">
-					<label for="activities">Actividades Culturales</label>
-				</div>
-				<div>
-					<input type="checkbox" id="card" name="card" value="card">
-					<label for="card">Tarjeta BBVA Xeneixe</label>
-				</div>
-				<div>
-					<input type="checkbox" id="discounts" name="discounts" value="discounts">
-					<label for="discounts">Programa de Descuentos</label>
-				</div>
-				<div>
-					<input type="checkbox" id="healthcare" name="healthcare" value="healthcare">
-					<label for="healthcare">Atención en Centro Médico</label>
-				</div>
-				<div>
-					<input type="checkbox" id="training" name="training" value="training">
-					<label for="training">Visitas al Entrenamiento</label>
-				</div>
-				<div>
-					<input type="checkbox" id="stadium" name="stadium" value="stadium">
-					<label for="stadium">Visitas a la Bombonera</label>
-				</div>
-				<div>
-					<input type="checkbox" id="museum" name="museum" value="museum">
-					<label for="museum">Visitas al Museo de la Pasión Boquense</label>
-				</div>
-			</fieldset>
-		</div>
-		<div>
-			<label class="block legend" for="coments">¿Comentarios o sugerencias?</label>
-			<textarea class="block" style="margin: 0rem 0 1rem 0;" id="coments" name="coments" rows="10" cols="33"
-				placeholder="Escribelas aquí..."></textarea>
-			<input class="block submit" id="submit" type="submit" value="Enviar">
-		</div>
-	</form>
 </body>
 
 </html>
